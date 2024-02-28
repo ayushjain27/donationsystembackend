@@ -33,7 +33,7 @@ router.post('/adddetail/clothes', fetchuser, [
             return res.status(400).json({ success, errors: errors.array() });
         }
         const detail = new Detail({
-            title, description, image: data[0].uploadFile.filename, category:'clothes', status:'default', user: req.user.id
+            title, description, image: "image", category:'clothes', status:'default', user: req.user.id
         })
         const savedDetail = await detail.save();
         success = true;
@@ -60,7 +60,7 @@ router.post('/adddetail/shoes', fetchuser, [
             return res.status(400).json({ success, errors: errors.array() });
         }
         const detail = new Detail({
-            title, description, image: data[0].uploadFile.filename, category:'shoes', status:'default', user: req.user.id
+            title, description, image: "image", category:'shoes', status:'default', user: req.user.id
         })
         const savedDetail = await detail.save();
         success = true;
@@ -87,7 +87,7 @@ router.post('/adddetail/books', fetchuser, [
             return res.status(400).json({ success, errors: errors.array() });
         }
         const detail = new Detail({
-            title, description, image: data[0].uploadFile.filename, category:'books', status:'default', user: req.user.id
+            title, description, image: "image", category:'books', status:'default', user: req.user.id
         })
         const savedDetail = await detail.save();
         success = true;
